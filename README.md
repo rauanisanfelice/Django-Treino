@@ -1,2 +1,2 @@
 # Django-Treino
-Alura Projeto para treinar Django
+Projeto Alura para treinar Django
