@@ -17,7 +17,54 @@
         {% else %}
             <p>Nenhum perfil encontrado</p>
         {% endif %}
+    </div>
 
+    <!-- CONVITES -->
+    <div class="panel panel-default">
+        {% with perfil_logado.convites_recebidos.count as total_de_convites %}
+            {% if total_de_convites %}
+                <div class="panel-heading">
+                    <strong>Você têm {{total_de_convites}} convite{{total_de_convites |pluralize}} aguardando aprovação
+                    </strong>
+                </div>
+                <ul class="list-group">
+                    {% for convite in perfil_logado.convites_recebidos.all%}
+                        <li class="list-group-item">
+                            {{convite.solicitante.nome}}
+                            <a href="{% url 'aceitar' convite.id %}" class="pull-right">Aceitar</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="panel-body">
+                    <p>Nenhum convite recebido</p>
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- CONTATOS -->
+    <div class="panel panel-default">
+        {% with perfil_logado.contatos.count as total_de_contatos %}
+            {% if total_de_contatos %}
+                <div class="panel-heading">
+                    <strong>Você têm {{total_de_contatos}} contato{{total_de_contatos |pluralize}}
+                    </strong>
+                </div>
+                <ul class="list-group">
+                    {% for contato in perfil_logado.contatos.all %}
+                        <li class="list-group-item">
+                            {{contato.nome}}
+                            <a href="{% url 'exibir' contato.id %}" class="pull-right">Exibir</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="panel-body">
+                    <p>Nenhum contato</p>
+                </div>
+            {% endif %}
+        {% endwith %}
     </div>
 </div>
 {% endblock body %}

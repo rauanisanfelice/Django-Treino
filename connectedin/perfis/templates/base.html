@@ -14,10 +14,10 @@
             <!-- MENU -->
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li><a href="{% url 'index' %}">NOME</a></li>
+                    <li><a href="{% url 'index' %}">{{ perfil_logado.nome|upper }}</a></li>
                     <li><a href="/logout/">Logout</a></li>
                 </ul>
-                <h3 class="text-muted">ConnectedIn</h3>
+                <a href="{% url 'index' %}"><h3 class="text-muted">ConnectedIn</h3></a>
             </div>
 
             <!-- PAINEL QUE CARREGA DO INDEX -->

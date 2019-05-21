@@ -6,6 +6,23 @@ body {
   padding-bottom: 20px;
 }
 
+body.squads-azul-claro{
+  background-color: rgb(140, 182, 250)
+}
+
+.squads-azul-claro{
+  background-color: rgb(140, 182, 250)
+}
+
+
+.squads-laranja{
+  background-color: rgb(255, 102, 0)
+}
+
+.squads-azul{
+  background-color: rgb(66, 133, 244)
+}
+
 .header,
 .content,
 .footer {

@@ -1,5 +1,5 @@
-<{% extends 'base.html' %}
-<{% block body %}
+{% extends 'base.html' %}
+{% block body %}
     <div class="row">
         <div class="col-lg-12">
             <h2 style="margin-top: 0"> {{perfil.nome}} </h2>
@@ -9,7 +9,13 @@
                 <a href="mailto:{{perfil.email}}">{{perfil.email}}</a>
             </address>
             <br>
-            <a href="{% url 'convidar' perfil.id %}">Convidar</a>
+            {% if ja_eh_contato %}
+                <div class="well well-sm">
+                    Você estão conectados!
+                </div>
+            {% else %}
+                <a href="{% url 'convidar' perfil.id %}">Convidar</a>
+            {% endif %}
         </div>
     </div>
 {% endblock body %}
