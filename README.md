@@ -5,6 +5,10 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/rauanisanfelice/Django-Treino.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rauanisanfelice/Django-Treino.svg)
 
+![GitHub stars](https://img.shields.io/github/stars/rauanisanfelice/Python_Treino.svg?style=social)
+![GitHub followers](https://img.shields.io/github/followers/rauanisanfelice.svg?style=social)
+![GitHub forks](https://img.shields.io/github/forks/rauanisanfelice/Python_Treino.svg?style=social)
+
 # Django-Treino
 Projeto __Alura__ para treinar __Django__
 
